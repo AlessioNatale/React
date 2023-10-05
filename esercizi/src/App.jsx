@@ -1,10 +1,10 @@
 
 
 function App() {
-  const hello = <h1>Hello, World!</h1>
+  const name = "Jonh"
   return (
     <>
-      {hello}
+      <h1>Hello, {name}</h1>
     </>
   )
 }
