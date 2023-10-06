@@ -2,7 +2,7 @@ export function Welcome({name, age}){
     return(
         <dir>
             <p>Welcome, {name}!</p>
-            {name === "Jonh" && age > 18 && age < 65 ? <p>Your age is {age}</p> : null}
+            { age > 18 ? <p>Your age is {age}</p> : <p>You are very young</p> }
         </dir>
     ) 
 }
