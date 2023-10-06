@@ -1,15 +1,19 @@
 
 
 function App() {
-  const name = "Jonh"
-  return (
-    <>
-    <h1>Hello, {name}</h1>
-    </>
-  )
-}
+    const nameHello = (name) =>{
+      return <h1>Hello, {name} </h1>
+    } 
+    return (
+      <>
+        {nameHello("Jonh")}
 
-export default App
+        {nameHello (<p>Jonh</p>)}
+      </>
+    )
+  }
+  
+  export default App
 
 // Esercizio 03
 // Cosa succede se la variabile name non viene passata alla funzione?
