@@ -1,10 +1,12 @@
 
 
 function App() {
-  const name = "Jonh"
+  const nameHello = (name) =>{
+    return <h1>Hello, {name} </h1>
+  } 
   return (
     <>
-      <h1>Hello, {name}</h1>
+      {nameHello("Jonh")}
     </>
   )
 }
