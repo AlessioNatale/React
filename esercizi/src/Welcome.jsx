@@ -1,8 +1,8 @@
 export function Welcome({name, age}){
     return(
-        <dir>
+        <div>
             <p>Welcome, {name}!</p>
             <p>Your age is {age}</p>
-        </dir>
+        </div>
     ) 
 }
