@@ -1,3 +1,5 @@
+import { Button } from "./Button"
+
 export function AlertClock(){
     function buttonClick(){
         const now = new Date()
@@ -7,7 +9,7 @@ export function AlertClock(){
     return (
         <div>
             <p>Clicca il bottone per sapere l'ora</p>
-            <button onClick={buttonClick}>Click me!</button>
+            <Button onclick={buttonClick} label={"Click me!"}/>
         </div>
     )
 
