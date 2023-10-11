@@ -1,6 +1,7 @@
 
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
 import { Welcome } from "./Welcome";
@@ -9,11 +10,11 @@ import { Welcome } from "./Welcome";
 export function App(){
     return(
         <div>
-           <Welcome name="Jonh" age={15}/>
             <Counter/>
-            <Clock/>
             <MouseClicker/>
             <MultiButton/>
+            <InteractiveWelcome/>
+            <Clock/>
         </div>
     )
 }
