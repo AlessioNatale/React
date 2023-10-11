@@ -28,17 +28,26 @@ export function Login() {
         alert("Login")
     }
 
+    function onSubmit(event){
+        onLogin()
+        event.preventDefault()
+    }
+
     function resetForm(){
         return setData(createData())
     }
 
     return (
-        <div>
+        <form>
             <input name="username" value={data.username} onChange={handleInputChange} />
             <input name="password" value={data.password} onChange={handleInputChange} />
             <input name="session" type="checkbox" checked={data.session} onChange={handleInputChange} />
-            <button disabled={!data.username || ! data.password} onClick={onLogin}>Login</button>
+            <button disabled={!data.username || ! data.password} onClick={onSubmit}>Login</button>
             <button onClick={resetForm}>Reset</button>
-        </div>
+        </form>
     );
 }
+
+
+// Come si impedisce il comportamento predefinito dell'elemento form?
+//per impedire il comportamento predifinito usoil metodo preventDefault che impedisce il comportamneto predefinito
