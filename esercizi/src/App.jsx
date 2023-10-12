@@ -5,6 +5,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
+import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
 
 
@@ -18,6 +19,7 @@ export function App(){
             <MultiButton/>
             <InteractiveWelcome/>
             <Login/>
+            <UncontrolledForm/>
         </div>
     )
 }
