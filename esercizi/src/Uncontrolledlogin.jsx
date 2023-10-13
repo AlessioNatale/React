@@ -2,18 +2,18 @@ export function UncontrolledForm(){
     function handleFormSubmit(event){
         event.preventDefault()
 
-        const username = event.target.username.value
-        const password = event.target.password.value
-
-        //quella dell'esercizio 47 e l'Api standard ma c'è ne sono altre che sono delle scorciatoie che però non ti garantiscono il
-        // corretto funzionamento su i vari browser, tipo questa
+        const formData = new FormData(event.target)
 
         const data = {
-            username,
-            password
+            username : formData.get("username"),
+            password : formData.get("password"),
+            session : formData.get("session") === "on"? true : false,
         }
 
         console.log(data);
+
+        //I vantaggi sono sicuramente la sintassi più corta in quanto basta creare una cosa costante, per quanto riguarad gli svantaggi
+        // dal video non ne elenca, soltato che se volessi accedere alla session ha un comportamento diverso e posso ovviare con l'operatore ternario
     }
 
 
