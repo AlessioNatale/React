@@ -6,7 +6,7 @@ export function UncontrolledForm(){
         const password = event.target.password.value
 
         //quella dell'esercizio 47 e l'Api standard ma c'è ne sono altre che sono delle scorciatoie che però non ti garantiscono il
-        // corretto funzionamento su i vari browser
+        // corretto funzionamento su i vari browser, tipo questa
 
         const data = {
             username,
