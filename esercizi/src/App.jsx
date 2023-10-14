@@ -1,5 +1,6 @@
 
 import { Clock } from "./Clock";
+import { Colors } from "./Colors";
 import { Counter } from "./Counter";
 import { FocusableInput } from "./FocusableInput";
 import { InteractiveWelcome } from "./InteractiveWelcome";
@@ -22,6 +23,7 @@ export function App(){
             <Login/>
             <UncontrolledForm/>
             <FocusableInput/>
+            <Colors items={["red", "yellow", "green", "blue"]}/>
         </div>
     )
 }
