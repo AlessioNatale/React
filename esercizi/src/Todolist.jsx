@@ -11,6 +11,8 @@ export function Todolist({ items }) {
       
       setItemsArray(updatedItems);
       setNewItem(''); 
+      //l'avevo gia fatto anche nell'esercizio precedente basta aggiungere alla funzione setNewItem
+      //un paramentro vuoto cosi da resettare il campo dell'input
 
     //   console.log(updatedItems)
   };
