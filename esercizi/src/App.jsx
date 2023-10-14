@@ -7,6 +7,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { MouseClicker } from "./MouseClicker";
 import { MultiButton } from "./MultiButton";
+import { Todolist } from "./Todolist";
 import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
 
@@ -29,6 +30,7 @@ export function App(){
                 {id:3, name:"green"},
                 {id:4, name:"blue"}
             ]}/>
+            <Todolist items={["pippo"]}/>
         </div>
     )
 }
