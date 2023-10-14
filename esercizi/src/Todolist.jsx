@@ -11,13 +11,14 @@ export function Todolist({ items }) {
       
       setItemsArray(updatedItems);
       setNewItem(''); 
-      //l'avevo gia fatto anche nell'esercizio precedente basta aggiungere alla funzione setNewItem
-      //un paramentro vuoto cosi da resettare il campo dell'input
-
+     
     //   console.log(updatedItems)
   };
 
-  console.log(items)
+  const handleReset = () => {
+    setItemsArray(items)
+  }
+
 
   return (
     <div>
@@ -28,6 +29,7 @@ export function Todolist({ items }) {
       </ul>
       <input value={newItem} onChange={(e) => setNewItem(e.target.value)} />
       <button onClick={handleAddItem}>Aggiungi</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
