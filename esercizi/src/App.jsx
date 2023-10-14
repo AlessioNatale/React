@@ -23,7 +23,12 @@ export function App(){
             <Login/>
             <UncontrolledForm/>
             <FocusableInput/>
-            <Colors items={["red", "yellow", "green", "blue"]}/>
+            <Colors items={[
+                {id:1, name:"red"},
+                {id:2, name:"yellow"},
+                {id:3, name:"green"},
+                {id:4, name:"blue"}
+            ]}/>
         </div>
     )
 }

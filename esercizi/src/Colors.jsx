@@ -1,8 +1,8 @@
 export function Colors({items}){
     return (
         <ul>
-            {items.map((name, index) =>(
-                <li key={index}>{name}</li>
+            {items.map((items) =>(
+                <li key={items.id}>{items.name}</li>
             ))}
         </ul>
     )
