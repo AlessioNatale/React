@@ -19,8 +19,12 @@ export function Counter ({value = 0}){
         setCounter(0)
      }
 
+    const CounterStyle = {
+        backgroundColor: "yellow",
+    } 
+
     return(
-        <div>
+        <div style={CounterStyle}>
             <CounterDisplay intialValue={counter} />
             <button onClick={handleCounterIncrement}>Increment</button>
             <button onClick={handelCounterDecrement}>Decrement</button>
