@@ -4,32 +4,34 @@ export function Todolist({ items }) {
   const [newItem, setNewItem] = useState(''); 
   const [itemsArray, setItemsArray] = useState(items); 
 
-  
   const handleAddItem = () => {
-  
-      const updatedItems = [...itemsArray, newItem]; 
-      
-      setItemsArray(updatedItems);
+   
+      const updatedItemsArray = [...itemsArray, newItem];
+      setItemsArray(updatedItemsArray);
+
       setNewItem(''); 
-     
-    //   console.log(updatedItems)
+    
   };
 
-  const handleReset = () => {
-    setItemsArray(items)
-  }
 
+  const handleRemoveItem = (index) => {
+    const updatedItemsArray = itemsArray.filter((_, i) => i !== index);
+    setItemsArray(updatedItemsArray);
+  };
 
   return (
     <div>
       <ul>
         {itemsArray.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>
+            {item}
+            <button onClick={() => handleRemoveItem(index)}>Elimina</button>
+          </li>
         ))}
       </ul>
-      <input value={newItem} onChange={(e) => setNewItem(e.target.value)} />
+      <input value={newItem} onChange={(e) => setNewItem(e.target.value)}/>
       <button onClick={handleAddItem}>Aggiungi</button>
-      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
+
