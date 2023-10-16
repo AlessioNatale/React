@@ -1,6 +1,7 @@
 
 import { Clock } from "./Clock";
 import { Colors } from "./Colors";
+import { Container } from "./Container";
 import { Counter } from "./Counter";
 import { FocusableInput } from "./FocusableInput";
 import { InteractiveWelcome } from "./InteractiveWelcome";
@@ -14,7 +15,7 @@ import { Welcome } from "./Welcome";
 
 export function App(){
     return(
-        <div>
+        <Container>
            <Welcome/>
             <Counter/>
             <Clock/>
@@ -31,7 +32,7 @@ export function App(){
                 {id:4, name:"blue"}
             ]}/>
             <Todolist items={["pippo"]}/>
-        </div>
+        </Container>
     )
 }
 
