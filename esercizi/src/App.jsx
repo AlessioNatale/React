@@ -17,13 +17,12 @@ import { Welcome } from "./Welcome";
 
 export function App(){
     const [language, setLanguage] = useState("en")
-    const [selectValue, setSelectValue] = useState(language);
+   
 
-    function handleLanguage(event) {
-        const newLanguage = event.target.value;
-        setLanguage(newLanguage);
-        setSelectValue(newLanguage);
-      }
+    function handleLanguage(language) {
+        
+        setLanguage(language);
+    }
 
     return(
         <Container title={"My Awersone Application"}>
@@ -31,11 +30,11 @@ export function App(){
             <Counter/>
             <LanguageContext.Provider value={language}>
                 <Clock/>
-                <select onChange={handleLanguage} value={selectValue}>
+                <select onChange={handleLanguage} >
                     <option value="it">IT</option>
                     <option value="en">EN</option>
                 </select>
-            
+            </LanguageContext.Provider>
             
             <MouseClicker/>
             <MultiButton/>
@@ -50,7 +49,7 @@ export function App(){
                 {id:4, name:"blue"}
             ]}/>
             <Todolist items={["pippo"]}/>
-            </LanguageContext.Provider>
+            
         </Container>
     )
 }
