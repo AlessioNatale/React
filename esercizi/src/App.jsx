@@ -15,7 +15,7 @@ import { Welcome } from "./Welcome";
 
 export function App(){
     return(
-        <Container>
+        <Container title={"My Awersone Application"}>
            <Welcome/>
             <Counter/>
             <Clock/>
