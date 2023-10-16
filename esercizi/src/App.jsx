@@ -29,13 +29,14 @@ export function App(){
         <Container title={"My Awersone Application"}>
            <Welcome/>
             <Counter/>
-            <LanguageContext.Provider value={language}>
-                <Clock/>
+            
+            <Clock/>
                 <select onChange={handleLanguage} value={selectValue}>
                     <option value="it">IT</option>
                     <option value="en">EN</option>
                 </select>
-            
+            {/* mi mostrera sempre current time senza darmi la possibilità di cambiare, mi mostra la lingua en perche 
+            nel LanguageContent è impostata la lingua en  e quindi accede a quella*/}
             
             <MouseClicker/>
             <MultiButton/>
@@ -50,7 +51,6 @@ export function App(){
                 {id:4, name:"blue"}
             ]}/>
             <Todolist items={["pippo"]}/>
-            </LanguageContext.Provider>
         </Container>
     )
 }
