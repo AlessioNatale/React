@@ -13,6 +13,7 @@ import { MultiButton } from "./MultiButton";
 import { Todolist } from "./Todolist";
 import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
+import { GithubUser } from "./GithubUser";
 
 
 export function App(){
@@ -35,12 +36,9 @@ export function App(){
                     <option value="it">IT</option>
                     <option value="en">EN</option>
                 </select>
-            {/* mi mostrera sempre current time senza darmi la possibilità di cambiare, mi mostra la lingua en perche 
-            nel LanguageContent è impostata la lingua en  e quindi accede a quella*/}
             
-            <MouseClicker/>
-            <MultiButton/>
-            <InteractiveWelcome/>
+            <GithubUser username={"AlessioNatale"}/>
+           
             <Login/>
             <UncontrolledForm/>
             <FocusableInput/>
