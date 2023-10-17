@@ -14,6 +14,7 @@ import { Todolist } from "./Todolist";
 import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
+import { GithubUsers } from "./GithubUsers";
 
 
 export function App(){
@@ -37,7 +38,7 @@ export function App(){
                     <option value="en">EN</option>
                 </select>
             
-            <GithubUser username={"AlessioNatale"}/>
+            <GithubUsers/>
            
             <Login/>
             <UncontrolledForm/>
