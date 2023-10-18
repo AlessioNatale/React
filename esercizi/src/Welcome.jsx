@@ -1,8 +1,10 @@
-export function Welcome({name, age}){
+import { Age } from "./Age";
+
+export function Welcome({name}){
     return(
         <dir>
             <p>Welcome, {name}!</p>
-            { age > 18 ? <p>Your age is {age}</p> : <p>You are very young</p> }
+            {name === "Jonh" ? <Age age={14}/> : null}
         </dir>
     ) 
 }
