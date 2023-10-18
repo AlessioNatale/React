@@ -1,0 +1,8 @@
+export function Age ({age}){
+    return (
+        <div>
+            {age >= 18 ? <p>Your age is {age}</p> : null}
+        </div>
+    )
+    
+}
