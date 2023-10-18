@@ -1,3 +1,3 @@
-export function CounterDisplay ({intialValue}){
-    return <h2>{intialValue}</h2>
+export function CounterDisplay ({valueDisplay}){
+    return <h2>{valueDisplay}</h2>
 }

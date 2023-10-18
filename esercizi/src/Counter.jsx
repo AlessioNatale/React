@@ -1,59 +1,44 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CounterDisplay } from "./CounterDiplay";
 
 
-function useCounter (initialValue = 0) {
-    const [counter, setCounter] = useState(initialValue)
+function useCounter(initialValue = 0) {
+  const [counter, setCounter] = useState(initialValue);
 
-    function handleCounterIncrement (){
-        setCounter((c) => c + 1)
-    }
-     function handelCounterDecrement (){
-        setCounter((c) => c - 1)
-     }
+  function handleCounterIncrement() {
+    setCounter((c) => c + 1);
+  }
 
-     function handleCounterReset(){
-        setCounter(0)
-     }
+  function handleCounterDecrement() {
+    setCounter((c) => c - 1);
+  }
 
-     return{
-        counter: counter,
-        onIncrement: handleCounterIncrement,
-        onDecrement: handelCounterDecrement,
-        onReset: handleCounterReset
-     }
+  function handleCounterReset() {
+    setCounter(0);
+  }
+
+  return {
+    counter: counter,
+    onIncrement: handleCounterIncrement,
+    onDecrement: handleCounterDecrement,
+    onReset: handleCounterReset,
+  };
 }
 
-export function Counter ({value = 0}){
-    const [counter, setCounter] = useState(value)
+export function Counter({initialValue = 0}) {
+  const { counter, onIncrement, onDecrement, onReset } = useCounter(initialValue);
 
-    
+  const counterStyle = {
+    backgroundColor: "yellow",
+  };
 
-    useEffect(() => {
-        console.log(`Il valore corrente del contatore è ${counter}`);
-    },[counter])
-
-    function handleCounterIncrement (){
-        setCounter((c) => c + 1)
-    }
-     function handelCounterDecrement (){
-        setCounter((c) => c - 1)
-     }
-
-     function handleCounterReset(){
-        setCounter(0)
-     }
-
-    const CounterStyle = {
-        backgroundColor: "yellow",
-    } 
-
-    return(
-        <div style={CounterStyle}>
-            <CounterDisplay intialValue={counter} />
-            <button onClick={handleCounterIncrement}>Increment</button>
-            <button onClick={handelCounterDecrement}>Decrement</button>
-            <button onClick={handleCounterReset}>Reset</button>
-        </div>
-    )
+  return (
+    <div style={counterStyle}>
+      <CounterDisplay valueDisplay={counter}/>
+      <button onClick={onIncrement}>Increment</button>
+      <button onClick={onDecrement}>Decrement</button>
+      <button onClick={onReset}>Reset</button>
+    </div>
+  );
 }
+
