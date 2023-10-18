@@ -1,15 +1,12 @@
 import { Button } from "./Button"
 
-export function AlertClock(){
-    function buttonClick(){
-        const now = new Date()
-        alert(`l'ora corrente è ${now.toLocaleTimeString()}`)
-    }
+export function AlertClock({current}){
+    
 
     return (
         <div>
             <p>Clicca il bottone per sapere l'ora</p>
-            <Button onclick={buttonClick} label={"Click me!"}/>
+            <Button onclick={current} label={"Click me!"}/>
         </div>
     )
 
