@@ -1,8 +1,10 @@
-export function Welcome({name, age}){
+import { Age } from "./Age";
+
+export function Welcome({name}){
     return(
         <dir>
             <p>Welcome, {name}!</p>
-            {age && <p>Your age is {age}</p>}
+            <Age age={12}/>
         </dir>
     ) 
 }
