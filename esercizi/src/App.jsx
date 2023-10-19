@@ -15,6 +15,7 @@ import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
+import { Location } from "./Location";
 
 
 export function App(){
@@ -39,6 +40,8 @@ export function App(){
                 </select>
 
             <GithubUser username={"AlessioNatale"}/>
+
+            <Location/>
             
           
            
