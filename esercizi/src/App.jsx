@@ -37,8 +37,10 @@ export function App(){
                     <option value="it">IT</option>
                     <option value="en">EN</option>
                 </select>
+
+            <GithubUser username={"AlessioNatale"}/>
             
-            <GithubUsers/>
+          
            
             <Login/>
             <UncontrolledForm/>
