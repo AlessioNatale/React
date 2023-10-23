@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Clock } from "./Clock";
 import { Colors } from "./Colors";
@@ -15,44 +14,25 @@ import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+export function App() {
+  const [language, setLanguage] = useState("en");
+  const [selectValue, setSelectValue] = useState(language);
 
-export function App(){
-    const [language, setLanguage] = useState("en")
-    const [selectValue, setSelectValue] = useState(language);
+  function handleLanguage(event) {
+    const newLanguage = event.target.value;
+    setLanguage(newLanguage);
+    setSelectValue(newLanguage);
+  }
 
-    function handleLanguage(event) {
-        const newLanguage = event.target.value;
-        setLanguage(newLanguage);
-        setSelectValue(newLanguage);
-      }
-
-    return(
-        <Container title={"My Awersone Application"}>
-           <Welcome/>
-            <Counter/>
-            
-            <Clock/>
-                <select onChange={handleLanguage} value={selectValue}>
-                    <option value="it">IT</option>
-                    <option value="en">EN</option>
-                </select>
-
-            <GithubUser username={"AlessioNatale"}/>
-            
-          
-           
-            <Login/>
-            <UncontrolledForm/>
-            <FocusableInput/>
-            <Colors items={[
-                {id:1, name:"red"},
-                {id:2, name:"yellow"},
-                {id:3, name:"green"},
-                {id:4, name:"blue"}
-            ]}/>
-            <Todolist items={["pippo"]}/>
-        </Container>
-    )
+  return (
+    <BrowserRouter>
+      <Container title={"My Awersome App"}>
+        <Routes>
+          <Route path="/" element={<Welcome name={"jonh"} />} />
+        </Routes>
+      </Container>
+    </BrowserRouter>
+  );
 }
-
