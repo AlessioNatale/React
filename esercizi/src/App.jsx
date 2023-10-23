@@ -15,6 +15,7 @@ import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -32,6 +33,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<Welcome name={"jonh"} />} />
           <Route path="/counter" element={<Counter/>}/>
+          <Route path="/users" element={<ShowGithubUser/>}/>
         </Routes>
       </Container>
     </BrowserRouter>
