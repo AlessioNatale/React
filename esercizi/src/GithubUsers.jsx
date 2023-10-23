@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GithubUser } from "./GithubUser";
-import { Link } from "react-router-dom/dist";
+import { Link, Outlet } from "react-router-dom/dist";
 
 export function GithubUsers(){
     const [data, setData] = useState('');
@@ -27,5 +27,6 @@ export function GithubUsers(){
                         </li>
                     ))}
                 </ul>
+                <Outlet/>
             </>
 }
