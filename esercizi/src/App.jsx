@@ -14,7 +14,7 @@ import { UncontrolledForm } from "./Uncontrolledlogin";
 import { Welcome } from "./Welcome";
 import { GithubUser } from "./GithubUser";
 import { GithubUsers } from "./GithubUsers";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
@@ -35,6 +35,9 @@ export function App() {
           <Route path="/counter" element={<Counter/>}/>
           <Route path="/users" element={<ShowGithubUser/>}/>
         </Routes>
+        <Link to={"/"}>Welcome</Link>
+        <Link to={"/counter"}>Counter</Link>
+        <Link to={"/users"}>UserGithub</Link>
       </Container>
     </BrowserRouter>
   );
