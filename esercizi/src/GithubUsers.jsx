@@ -1,32 +1,31 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GithubUser } from "./GithubUser";
+import { Link } from "react-router-dom/dist";
 
 export function GithubUsers(){
-    const [data, setData] = useState([])
-    const [selectedUser, setSelectedUser] = useState(null);
+    const [data, setData] = useState('');
+    const [users, setUsers] = useState([]);
 
-    async function fetchUser(){
-        const response = await fetch("https://api.github.com/users")
-        const json = await response.json()
-
-        setData(json)
-        console.log(json);
+    const handleInput = (event) => {
+        setData(event.target.value);
     }
 
-    useEffect(() => {
-        fetchUser()
-    },[])
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setUsers(p => [...p, data]);
+    }
 
-    return (
-        <div>
-            <ul>
-                {data.slice(0, 10).map((user) =>(
-                    <li key={user.login}>
-                        <button onClick={() => setSelectedUser(user.login)}>{user.login}</button>
-                    </li>
-                ))}
-            </ul>
-            {selectedUser && <GithubUser username={selectedUser}/>}
-        </div>
-    )
+    return <>
+            <form onSubmit={handleSubmit}>
+                <input type="text" value={data} onChange={handleInput} />
+                <button type="submit">Search User</button>
+            </form>
+                <ul>
+                    {users.map(el => (
+                        <li key={el}>
+                            <Link to={el}>Click here</Link>
+                        </li>
+                    ))}
+                </ul>
+            </>
 }

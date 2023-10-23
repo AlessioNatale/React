@@ -40,8 +40,9 @@ export function App() {
         <Routes>
           <Route path="/" element={<Welcome name={"jonh"} />} />
           <Route path="/counter" element={<Counter/>}/>
-          <Route path="/users" element={<ShowGithubUser/>}/>
-
+          <Route path="/users" element={<GithubUsers/>}/>
+          <Route path= "/users/: username" element={<ShowGithubUser/>}/>
+        
           <Route path ="*"element={<NotFound/>} />
         </Routes>
         <Link to={"/"}>Welcome</Link>
