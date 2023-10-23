@@ -27,6 +27,13 @@ export function App() {
     setSelectValue(newLanguage);
   }
 
+  const NotFound = () => (
+    <div>
+      <h2>404 - Not Found</h2>
+      <p>Sorry, the page you are looking for does not exist.</p>
+    </div>
+  );
+
   return (
     <BrowserRouter>
       <Container title={"My Awersome App"}>
@@ -34,6 +41,8 @@ export function App() {
           <Route path="/" element={<Welcome name={"jonh"} />} />
           <Route path="/counter" element={<Counter/>}/>
           <Route path="/users" element={<ShowGithubUser/>}/>
+
+          <Route path ="*"element={<NotFound/>} />
         </Routes>
         <Link to={"/"}>Welcome</Link>
         <Link to={"/counter"}>Counter</Link>
