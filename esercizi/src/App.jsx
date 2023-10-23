@@ -31,6 +31,7 @@ export function App() {
       <Container title={"My Awersome App"}>
         <Routes>
           <Route path="/" element={<Welcome name={"jonh"} />} />
+          <Route path="/counter" element={<Counter/>}/>
         </Routes>
       </Container>
     </BrowserRouter>
