@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GithubUser } from "./GithubUser";
 import { Link, Outlet } from "react-router-dom/dist";
 
 export function GithubUsers(){

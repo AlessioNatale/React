@@ -18,14 +18,6 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ShowGithubUser } from "./ShowGithubUser";
 
 export function App() {
-  const [language, setLanguage] = useState("en");
-  const [selectValue, setSelectValue] = useState(language);
-
-  function handleLanguage(event) {
-    const newLanguage = event.target.value;
-    setLanguage(newLanguage);
-    setSelectValue(newLanguage);
-  }
 
   const NotFound = () => (
     <div>
@@ -38,7 +30,7 @@ export function App() {
     <BrowserRouter>
       <Container title={"My Awersome App"}>
         <Routes>
-          <Route path="/" element={<Welcome name={"jonh"} />} />
+          <Route path="/" element={<Welcome />} />
           <Route path="/counter" element={<Counter/>}/>
           <Route path="/users" element={<GithubUsers/>}>
             <Route path= "/users/: username" element={<ShowGithubUser/>}/>
