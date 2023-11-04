@@ -7,7 +7,7 @@ export function App(){
     return(
         <div>
            <Welcome name="Jonh" age={15}/>
-            <Counter value={5}/>
+            <Counter value={5} increment={2}/>
         </div>
     )
 }

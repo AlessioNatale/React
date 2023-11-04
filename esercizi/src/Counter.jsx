@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-export function Counter ({value = 0}){
+export function Counter ({value = 0, increment=1}){
+    
     const [counter, setCounter] = useState(value)
 
     function handleCounterIncrement (){
-        setCounter((c) => c + 1)
+        setCounter((c) => c + increment)
     }
+
 
     return(
         <div>
